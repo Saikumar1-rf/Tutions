@@ -236,6 +236,12 @@ const Tutor = () => {
 
     if (!formData.file) newErrors.file = "File upload is required";
 
+    if (!formData.availableTimings) {
+        newErrors.availableTimings = "Available timing is required";
+      }
+  
+  
+
     
     return newErrors;
   };
@@ -557,8 +563,8 @@ const Tutor = () => {
               ))}
             </select>
             {errors.availableTimings && (
-              <span className="text-red-500 text-sm">{errors.availableTimings}</span>
-            )}
+          <span className="text-red-500 text-sm">{errors.availableTimings}</span>
+        )}
           </div>
         </div>
 

@@ -13,7 +13,6 @@ const Login = () => {
   // Email validation
   const validateEmail = (input) => {
     const emailPattern = /^[a-z0-9._%+-]+@[a-z.-]+\.(com|net|org|in|edu|gov|mil|co|us|info)$/;
-
     return emailPattern.test(input) &&  !/^\d[0-5]/.test(input);
   };
 

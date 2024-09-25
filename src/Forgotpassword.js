@@ -43,8 +43,13 @@ const Forgotpass = () => {
   }, [otp, timer]);
 
   const validateEmail = (email) => {
-       const emailRegex = /^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@[a-zA-Z]+\.[a-zA-Z]{2,}(\.com)?$/;
-    return emailRegex.test(email) && !/\s/.test(email); // Ensure no spaces are present
+      //  const emailRegex = /^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@[a-zA-Z]+\.[a-zA-Z]{2,}(\.com)?$/;
+      // const emailRegex=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        //  const emailRegex=/^[a-z0-9]+(\.[a-z0-9]+)*@[a-z]{2,}(\.com|\.in)$/;
+     const emailRegex=/^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@(gmail|yahoo|org|outlook|hotmail|example|sai)\.(com|net|org|in|edu|gov|mil|co|us|info|org\.in)$/;
+      // const emailRegex=/^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@[a-zA-Z]+\.(com|net|org|in|edu|gov|mil|co|us|info|org\.in)$/;
+        // const emailRegex=/^[a-z]+@[a-zA-Z]+\.(com|org|in|co\.in|net|edu|gov)$/;
+      return emailRegex.test(email) && !/\s/.test(email); // Ensure no spaces are present
   };
 
   const handleEmailChange = (e) => {
