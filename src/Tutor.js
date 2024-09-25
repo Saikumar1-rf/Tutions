@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // import LocationForm from "../components/LocationForm";
 
 const countryCodes = [
@@ -637,7 +638,7 @@ const Tutor = () => {
             type="submit"
             className="w-24 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-500"
           >
-            NEXT
+            <Link to='/success'>NEXT</Link>
           </button>
         </div>
       </form>

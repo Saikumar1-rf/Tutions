@@ -5,6 +5,7 @@ import Login from './Login';
 import Forgotpassword from './Forgotpassword';
 import Student from './Student';
 import Tutor from './Tutor';
+import Successfull from './Successfull';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
    <Route path='/forgotpassword' element={<Forgotpassword/>}></Route>
    <Route path='/student'element={<Student/>}></Route>
    <Route path='/tutor'element={<Tutor/>}></Route>
+   <Route path='/success'element={<Successfull/>}></Route>
    </Routes>
     </div>
   );
