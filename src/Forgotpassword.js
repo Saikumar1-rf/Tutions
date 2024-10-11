@@ -45,10 +45,9 @@ const Forgotpass = () => {
   const validateEmail = (email) => {
       //  const emailRegex = /^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@[a-zA-Z]+\.[a-zA-Z]{2,}(\.com)?$/;
       // const emailRegex=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        //  const emailRegex=/^[a-z0-9]+(\.[a-z0-9]+)*@[a-z]{2,}(\.com|\.in)$/;
-     const emailRegex=/^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@(gmail|yahoo|org|outlook|hotmail|example|sai)\.(com|net|org|in|edu|gov|mil|co|us|info|org\.in)$/;
-      // const emailRegex=/^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@[a-zA-Z]+\.(com|net|org|in|edu|gov|mil|co|us|info|org\.in)$/;
-        // const emailRegex=/^[a-z]+@[a-zA-Z]+\.(com|org|in|co\.in|net|edu|gov)$/;
+        //  const emailRegex=/^[a-z0-9]+(\.[a-z0-9]+)*@[a-z]{2,}(\.com||\.in)$/;/^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@(gmail||yahoo||org||outlook||hotmail||example||sai)\.(com||net||org||in||edu||gov||mil||co||us||info||org\.in)$/;const emailRegex = /^(?!\d)[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@(gmail|yahoo|org|outlook|hotmail|example|sai)\.(com|net|org|in|edu|gov|mil|co\.in|us|info|org\.in)$/;
+const emailRegex=/^(?!\d)[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@(gmail||yahoo||org||outlook||hotmail||example||sai)\.(com|net|org|in||edu||gov||mil||us||info||org\.in)$/;
+  //  const emailRegex=/^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@(gmail||yahoo||outlook||hotmail||example||sai)\.in$/;
       return emailRegex.test(email) && !/\s/.test(email); // Ensure no spaces are present
   };
 
@@ -292,7 +291,7 @@ const Forgotpass = () => {
                   {createPassword.length >= 8 &&
                   /[A-Z]/.test(createPassword) &&
                   /\d/.test(createPassword) &&
-                  /[!@#$%^&*(),.?":{}|<>]/.test(createPassword) ? (
+                  /[!@#$%^&*(),.?":{}||<>]/.test(createPassword) ? (
                     <FaCheck className=" text-blue-500  mr-2 h-4 w-4" />
                   ) : (
                     <ImCross className="mr-2 text-red-500 h-3 w-3" />
@@ -302,7 +301,7 @@ const Forgotpass = () => {
                     {createPassword.length < 8 ||
                     !/[A-Z]/.test(createPassword) ||
                     !/\d/.test(createPassword) ||
-                    !/[!@#$%^&*(),.?":{}|<>]/.test(createPassword)
+                    !/[!@#$%^&*(),.?":{}||<>]/.test(createPassword)
                       ? " weak"
                       : " strong"}
                   </p>
@@ -341,7 +340,7 @@ const Forgotpass = () => {
 
                 {/* Symbol Validation */}
                 <div className="flex items-center">
-                  {/[!@#$%^&*(),.?":{}|<>]/.test(createPassword) ? (
+                  {/[!@#$%^&*(),.?":{}||<>]/.test(createPassword) ? (
                     <FaCheck className="mr-2 h-4 w-4 text-blue-500" />
                   ) : (
                     <ImCross className="mr-2 text-red-500 h-3 w-3" />
